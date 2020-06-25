@@ -6,11 +6,11 @@ def application(environ, start_response):
     first_num = d.get('first_num',[''])[0]
     second_num = d.get('second_num', [''])[0]
     sum, mul = -1, -1
-    if first_num.isdigit() and second_num.isdigit(): 
+    try:
         first_num, second_num = int(first_num), int(second_num)
         sum = first_num + second_num
         mul = first_num * second_num
-    else:
+    except ValueError:
         sum = -99999999        
         mul = -99999999
     response_body = html % {'sum':sum, 'mul':mul}
