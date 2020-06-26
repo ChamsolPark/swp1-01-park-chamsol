@@ -1,4 +1,3 @@
-from cgi import parse_qs
 from template import html
 
 def application(environ, start_response):
