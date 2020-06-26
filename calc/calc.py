@@ -1,4 +1,3 @@
-    d = parse_qs(environ['QUERY_STRING'])
     first_num = d.get('first_num',[''])[0]
     second_num = d.get('second_num', [''])[0]
     sum, mul = -1, -1
