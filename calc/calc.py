@@ -1,4 +1,3 @@
-from template import html
 
 def application(environ, start_response):
     d = parse_qs(environ['QUERY_STRING'])
